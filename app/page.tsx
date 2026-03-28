@@ -10,6 +10,7 @@ import FAQ from '@/components/sections/FAQ';
 import CTASection from '@/components/sections/CTASection';
 import Footer from '@/components/layout/Footer';
 import CookieBanner from '@/components/layout/CookieBanner';
+import FloatingCTA from '@/components/ui/FloatingCTA';
 
 export default function HomePage() {
   return (
@@ -28,6 +29,7 @@ export default function HomePage() {
       </main>
       <Footer />
       <CookieBanner />
+      <FloatingCTA />
     </>
   );
 }
