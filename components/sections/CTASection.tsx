@@ -1,72 +1,128 @@
 'use client';
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import ScrollReveal from '@/components/animations/ScrollReveal';
+import { useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+
+function LinkIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 20 20">
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeOpacity="0.55"
+        strokeWidth="1.25"
+        d="M11.672 10c0-2.076-1.93-4.164-4.286-4.164H5.958C3.59 5.836 1.672 7.7 1.672 10c0 1.982 1.425 3.64 3.333 4.061q.46.103.953.103"
+      />
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeOpacity="0.55"
+        strokeWidth="1.25"
+        d="M8.328 10c0 2.076 1.93 4.164 4.286 4.164h1.428c2.367 0 4.286-1.864 4.286-4.165 0-1.982-1.425-3.64-3.333-4.061a4.4 4.4 0 0 0-.953-.103"
+      />
+    </svg>
+  );
+}
 
 export default function CTASection() {
+  const [videoLink, setVideoLink] = useState('');
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: false, margin: '-15% 0px -15% 0px' });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    window.open('#', '_blank');
+  };
+
   return (
-    <section id="cta" className="py-24 md:py-32 relative overflow-hidden">
-      {/* Background Video/Glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1125] to-[#0A0A0A] pointer-events-none -z-10" />
+    <>
+      {/* 
+        Heading-only section that triggers the CTA animation (matches home0625_cta_section).
+        This section is invisible / zero-height and only used as an animation anchor.
+      */}
 
-      <div className="padding-global relative z-10">
-        <div className="container-1200">
-          <div className="text-center max-w-[600px] mx-auto">
-            <ScrollReveal>
-              <h2 className="text-[40px] md:text-[56px] font-bold leading-[1.1] mb-6 tracking-tight">
-                Get started with<br/>OpusClip
-              </h2>
-            </ScrollReveal>
+      {/* CTA card section with video background */}
+      <section
+        id="cta-card-section"
+        ref={sectionRef}
+        className="py-8 pb-16 bg-background"
+        aria-label="Get started with OpusClip"
+      >
+        <div className="padding-global">
+          <div className="container-1200">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97, y: 24 }}
+              animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.97, y: 24 }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              className="relative overflow-hidden rounded-[24px] min-h-[300px] flex flex-col items-center justify-center px-8 py-16 md:py-20"
+            >
+              {/* Video background */}
+              <video
+                src="https://cdn.prod.website-files.com/6388604483b03a9ecb34d695%2F684fe22a7308ea61161b1e3b_cta%20bg-transcode.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ zIndex: 0 }}
+              />
 
-            <ScrollReveal delay={0.1}>
-              <p className="text-[17px] leading-[1.6] text-[#999999] mb-10">
-                Turn your long videos into viral shorts. Start creating for free today.
-              </p>
-            </ScrollReveal>
+              {/* Dark overlay to ensure text legibility */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background: 'rgba(0,0,0,0.15)',
+                  zIndex: 1,
+                }}
+              />
 
-            <ScrollReveal delay={0.2}>
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Link
-                  href="#"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold tracking-wide hover:bg-white/90 transition-colors duration-200"
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-center text-center gap-8 w-full max-w-[620px] mx-auto">
+                {/* Heading */}
+                <motion.h2
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+                  transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  className="text-[36px] md:text-[48px] font-bold leading-[1.1] tracking-tight text-white"
                 >
-                  Get 90 Credits for Free
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-1">
-                    <path d="M3.333 8h9.334M8 3.333L12.667 8 8 12.667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
-              </motion.div>
-            </ScrollReveal>
+                  Get started with OpusClip
+                </motion.h2>
 
-            <ScrollReveal delay={0.3}>
-              <p className="text-[13px] text-[#999999] mt-6">
-                No credit card required
-              </p>
-            </ScrollReveal>
-
-            {/* Trust badge */}
-            <ScrollReveal delay={0.35}>
-              <div className="flex items-center justify-center gap-3 mt-4">
-                {/* 5 stars */}
-                <div className="flex gap-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 1l2.163 4.383L15 6.056l-3.5 3.412.826 4.818L8 12.056l-4.326 2.23.826-4.818L1 6.056l4.837-.673L8 1z" fill="#d4a853"/>
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-[13px] text-[#999999]">
-                  Trusted by 12 million video creators
-                </span>
+                {/* Embedded input bar */}
+                <motion.form
+                  onSubmit={handleSubmit}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                  transition={{ duration: 0.45, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex items-center w-full max-w-[520px] bg-white/10 border border-white/20 rounded-full overflow-hidden"
+                  style={{ backdropFilter: 'blur(12px)' }}
+                >
+                  <div className="flex items-center pl-5 pr-2 py-1 gap-2 flex-1">
+                    <span className="text-white shrink-0">
+                      <LinkIcon />
+                    </span>
+                    <input
+                      type="text"
+                      value={videoLink}
+                      onChange={(e) => setVideoLink(e.target.value)}
+                      placeholder="Drop a video link"
+                      className="bg-transparent border-none outline-none text-white placeholder:text-white/50 text-[15px] font-medium py-[14px] w-full min-w-0"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="bg-white text-black text-[15px] font-semibold px-6 py-[14px] rounded-full mr-1 hover:bg-white/90 transition-colors shrink-0"
+                  >
+                    Get free clips
+                  </button>
+                </motion.form>
               </div>
-            </ScrollReveal>
+            </motion.div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
