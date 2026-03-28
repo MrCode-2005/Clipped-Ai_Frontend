@@ -21,13 +21,13 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="section-padding">
+    <section id="faq" className="py-20 md:py-32 bg-background border-t border-white/5">
       <div className="padding-global">
         <div className="container-1200">
           <div className="max-w-[800px] mx-auto">
             {/* Heading */}
-            <ScrollReveal className="mb-10">
-              <h2 className="text-display-md md:text-display-lg text-center md:text-left">
+            <ScrollReveal className="mb-12">
+              <h2 className="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight text-center">
                 Got questions?
               </h2>
             </ScrollReveal>
@@ -35,20 +35,20 @@ export default function FAQ() {
             {/* Accordion items */}
             <div className="space-y-0">
               {FAQ_ITEMS.map((item, index) => (
-                <ScrollReveal key={index} delay={index * 0.05}>
-                  <div className="border-b border-border last:border-b-0">
+                <ScrollReveal key={index} delay={index * 0.05} className="border-b border-white/10 last:border-b-0">
+                  <div>
                     {/* Trigger */}
                     <button
                       onClick={() => toggleAccordion(index)}
-                      className="flex items-center justify-between w-full py-5 md:py-6 text-left
+                      className="flex items-center justify-between w-full py-6 md:py-8 text-left
                                group transition-opacity duration-200 hover:opacity-80"
                       aria-expanded={openIndex === index}
                     >
-                      <h3 className="text-heading-sm md:text-heading-lg pr-4 font-semibold">
+                      <h3 className="text-[20px] md:text-[24px] font-bold tracking-tight pr-4">
                         {item.question}
                       </h3>
                       <ChevronDown
-                        className={`shrink-0 text-text-secondary transition-transform duration-300
+                        className={`shrink-0 text-white/50 transition-transform duration-300
                                    ${openIndex === index ? 'rotate-180' : ''}`}
                       />
                     </button>
@@ -66,8 +66,8 @@ export default function FAQ() {
                           }}
                           className="overflow-hidden"
                         >
-                          <div className="pb-5 md:pb-6 pr-8 md:pr-12">
-                            <p className="text-body-md text-text-secondary leading-relaxed">
+                          <div className="pb-6 md:pb-8 pr-8 md:pr-12">
+                            <p className="text-[16px] text-[#999999] leading-[1.6]">
                               {item.answer}
                             </p>
                           </div>

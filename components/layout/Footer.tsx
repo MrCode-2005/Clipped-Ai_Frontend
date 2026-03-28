@@ -68,44 +68,44 @@ export default function Footer() {
   const footerSections = Object.values(FOOTER_LINKS);
 
   return (
-    <footer className="pt-16 md:pt-20 pb-8">
+    <footer className="pt-8 md:pt-16 pb-8 bg-background">
       <div className="padding-global">
         <div className="container-1200">
           {/* Main footer card */}
-          <div className="bg-background-card border border-border rounded-3xl p-8 md:p-12 lg:p-16">
+          <div className="bg-[#111111] border border-white/5 rounded-3xl p-8 md:p-12 lg:p-16">
             {/* Logo */}
-            <div className="mb-10 md:mb-14">
+            <div className="mb-12 md:mb-16">
               <Link href="/" className="inline-flex items-center gap-2 text-white">
                 <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="16" cy="16" r="16" fill="currentColor"/>
                   <path d="M16 6C10.477 6 6 10.477 6 16s4.477 10 10 10 10-4.477 10-10S21.523 6 16 6zm0 15.5a5.5 5.5 0 110-11 5.5 5.5 0 010 11z" fill="#09090b"/>
                   <path d="M16 12.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" fill="#09090b"/>
                 </svg>
-                <span className="text-lg font-bold">OpusClip</span>
+                <span className="text-[20px] font-bold tracking-tight">OpusClip</span>
               </Link>
             </div>
 
             {/* Links grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6 mb-16">
               {footerSections.map((section) => (
                 <div key={section.title}>
-                  <h3 className="text-body-sm font-semibold text-white mb-4">
+                  <h3 className="text-[14px] font-semibold text-white mb-5">
                     {section.title}
                   </h3>
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-4">
                     {section.links.map((link) => (
                       <li key={link.label}>
                         <Link
                           href={link.href}
-                          className="text-body-sm text-text-muted hover:text-white transition-colors duration-200
-                                   inline-flex items-center gap-1.5"
+                          className="text-[14px] text-[#999999] hover:text-white transition-colors duration-200
+                                   inline-flex items-center gap-2"
                         >
                           {link.label}
                           {'badge' in link && link.badge && (
-                            <span className={`text-body-xs font-semibold px-1.5 py-0.5 rounded
+                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded
                               ${link.badge === 'Free'
-                                ? 'bg-accent-green/15 text-accent-green'
-                                : 'bg-accent-blue/15 text-accent-blue'
+                                ? 'bg-[#22c55e]/10 text-[#22c55e]'
+                                : 'bg-[#6723ff]/10 text-[#6723ff]'
                               }`}
                             >
                               {link.badge}
@@ -120,28 +120,26 @@ export default function Footer() {
             </div>
 
             {/* Badges & Language */}
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-10">
               <div className="flex items-center gap-4">
                 <Image
                   src="/images/soc2-badge.webp"
                   alt="SOC2 TYPE 2 Certified"
                   width={47}
                   height={47}
-                  className="opacity-80"
+                  className="opacity-90 grayscale-[0.2]"
                 />
                 <Image
                   src="/images/best-software-badge.png"
                   alt="Best Software 2025 Top 50 AI Products"
                   width={45}
                   height={45}
-                  className="opacity-80"
+                  className="opacity-90 grayscale-[0.2]"
                 />
               </div>
 
               {/* Language selector */}
-              <button className="flex items-center gap-2 text-body-sm text-text-muted
-                               border border-border rounded-full px-4 py-2
-                               hover:text-white hover:border-border-light transition-all duration-200">
+              <button className="flex items-center gap-2 text-[14px] text-[#999999] hover:text-white transition-colors duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 18 19">
                   <path fill="currentColor" fillRule="evenodd" d="M9 2.995a6.825 6.825 0 1 0 0 13.65 6.825 6.825 0 0 0 0-13.65M.825 9.82a8.175 8.175 0 1 1 16.35 0 8.175 8.175 0 0 1-16.35 0" clipRule="evenodd"/>
                   <path fill="currentColor" fillRule="evenodd" d="M1.541 7.064a.45.45 0 0 1 .561-.3l-.13.43.13-.43h.001l.005.002.024.006q.03.01.096.027.128.037.38.1c.335.082.824.192 1.439.303 1.23.221 2.96.443 4.953.443 1.992 0 3.722-.222 4.953-.443a23 23 0 0 0 1.82-.403l.095-.027.024-.006.005-.002.13.43.13.431-.003.001-.007.003-.029.008-.107.03q-.14.04-.404.105c-.35.087-.859.201-1.495.315-1.27.229-3.055.458-5.112.458s-3.842-.229-5.112-.458a24 24 0 0 1-1.9-.42l-.106-.03-.029-.008-.008-.003h-.002l.13-.431-.13.43a.45.45 0 0 1-.302-.56m14.357-.3a.45.45 0 0 1 .26.861l-.13-.43" clipRule="evenodd"/>
@@ -154,17 +152,17 @@ export default function Footer() {
             </div>
 
             {/* Divider */}
-            <div className="h-px bg-border mb-6" />
+            <div className="h-px bg-white/5 mb-8" />
 
             {/* Bottom bar */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-body-xs text-text-muted text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-[14px] text-[#666666] text-center md:text-left">
                 <span>© {new Date().getFullYear()} </span>
                 <span>OpusClip by Opusclip Inc. All rights reserved.</span>
               </div>
 
               {/* Social links */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
                 {SOCIAL_LINKS.map((social) => {
                   const IconComponent = socialIcons[social.name];
                   return (
@@ -174,8 +172,7 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.name}
-                      className="text-text-muted hover:text-white transition-colors duration-200
-                               hover:-translate-y-0.5 transition-transform"
+                      className="text-[#999999] hover:text-white transition-colors duration-200"
                     >
                       {IconComponent && <IconComponent />}
                     </Link>

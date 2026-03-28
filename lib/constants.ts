@@ -67,24 +67,21 @@ export const TRUSTED_BY_LOGOS = [
 
 // ===== Feature Sections =====
 export const CLIP_ANYTHING = {
-  badge: 'CLIPANYTHING',
-  heading: 'AI that understands your videos like a human viewer',
-  description: 'Our ClipAnything model understands all visual, audio and sentiment cues throughout the video to find the best moments.',
-  image: '/images/clip-anything.avif',
+  heading: 'Turn long videos into shorts in 1 click',
+  tabs: ['Vlog', 'Podcast', 'Gaming', 'Talking Head'],
+  features: [
+    {
+      title: 'ClipAnything™',
+      description: 'Every other AI clipping tool only works with video podcasts. ClipAnything is the only AI clipping model that turns any genre — vlogs, gaming, sports, interviews, explainer videos — into viral clips in 1 click.',
+      videoUrl: '/videos/clip-anything.mp4'
+    },
+    {
+      title: 'ReframeAnything™',
+      description: 'The only AI reframe model that resizes any video for any platform and keeps moving subjects centered with AI object tracking. If you want more control, use manual tracking to instruct AI exactly what to follow.',
+      videoUrl: '/videos/reframe.mp4'
+    }
+  ]
 };
-
-export const AI_FEATURES = [
-  {
-    title: 'AI Voice-over',
-    description: 'Generate natural-sounding voice-overs in multiple languages and styles.',
-    image: '/images/ai-voice-over.avif',
-  },
-  {
-    title: 'AI B-Roll',
-    description: 'Automatically add relevant B-roll footage to enhance your clips.',
-    image: '/images/ai-broll.avif',
-  },
-];
 
 // ===== Scale Section =====
 export const SCALE_FEATURES = [

@@ -48,9 +48,9 @@ export default function AIEditor() {
       <div className="padding-global">
         <div className="container-1200">
           {/* Badge */}
-          <FadeIn className="text-center mb-4">
-            <span className="inline-flex items-center gap-2 text-label-md text-accent-blue uppercase tracking-widest">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <FadeIn className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 text-[13px] font-bold text-[#8a2be2] uppercase tracking-[0.08em]">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.5 2h-11A1.5 1.5 0 001 3.5v9A1.5 1.5 0 002.5 14h11a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0013.5 2zM5 12H3V8h2v4zm3 0H6V4h2v8zm3 0H9V6h2v6z" fill="currentColor"/>
               </svg>
               AI EDITOR
@@ -59,14 +59,14 @@ export default function AIEditor() {
 
           {/* Heading */}
           <ScrollReveal className="text-center mb-6 max-w-[800px] mx-auto">
-            <h2 className="text-display-md md:text-display-lg">
+            <h2 className="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight">
               AI that edits with you, not just for you
             </h2>
           </ScrollReveal>
 
           {/* Description */}
-          <FadeIn delay={0.15} className="text-center mb-12 max-w-[640px] mx-auto">
-            <p className="text-body-lg text-text-secondary">
+          <FadeIn delay={0.15} className="text-center mb-16 max-w-[700px] mx-auto">
+            <p className="text-[17px] leading-[1.6] text-[#999999]">
               Fine-tune your clips with our intelligent editor. Add AI hooks, B-roll, music, and captions — all powered by AI that understands your content.
             </p>
           </FadeIn>

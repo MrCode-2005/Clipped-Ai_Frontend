@@ -14,28 +14,12 @@ export default function GrowthPartner() {
     <section className="section-padding overflow-hidden">
       <div className="padding-global">
         <div className="container-1200">
-          {/* Badge */}
-          <FadeIn className="text-center mb-4">
-            <span className="inline-flex items-center gap-2 text-label-md text-accent-blue uppercase tracking-widest">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 1L1 5l7 4 7-4-7-4zM1 11l7 4 7-4M1 8l7 4 7-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              </svg>
-              CUSTOMER STORIES
-            </span>
-          </FadeIn>
-
           {/* Heading */}
           <ScrollReveal className="text-center mb-6 max-w-[800px] mx-auto">
-            <h2 className="text-display-md md:text-display-lg">
-              A partner to your growth
+            <h2 className="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight">
+              The only AI editor that actually drives growth. Just ask millions of creators and brands.
             </h2>
           </ScrollReveal>
-
-          <FadeIn delay={0.15} className="text-center mb-12 max-w-[640px] mx-auto">
-            <p className="text-body-lg text-text-secondary">
-              See how creators are earning 10M+ views in 1 month using video clipping
-            </p>
-          </FadeIn>
         </div>
       </div>
 
