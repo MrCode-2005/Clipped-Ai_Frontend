@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
 const carouselItems = [
-  { id: 1, type: 'video', src: '/assets/animation/animation.mov' },
-  { id: 2, type: 'video', src: '/assets/videos/video1.mp4' },
-  { id: 3, type: 'video', src: '/assets/videos/video2.mp4' },
-  { id: 4, type: 'image', src: '/assets/images/image1.png' },
-  { id: 5, type: 'image', src: '/assets/images/image2.png' },
-  { id: 6, type: 'image', src: '/assets/images/image3.png' },
+  { id: 1, type: 'video', src: '/assests/animation/animation.mov' },
+  { id: 2, type: 'video', src: '/assests/videos/video1.mp4' },
+  { id: 3, type: 'video', src: '/assests/videos/video2.mp4' },
+  { id: 4, type: 'image', src: '/assests/images/image1.png' },
+  { id: 5, type: 'image', src: '/assests/images/image2.png' },
+  { id: 6, type: 'image', src: '/assests/images/image3.png' },
 ];
 
 export default function HeroCarousel() {
