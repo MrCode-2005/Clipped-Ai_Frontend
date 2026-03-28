@@ -133,19 +133,26 @@ export default function Navbar() {
     <>
       <header
         id="navbar"
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
-          ${isScrolled ? 'bg-background/95 backdrop-blur-md' : 'bg-transparent'}
-        `}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-background/90 backdrop-blur-md border-b border-white/5'
+            : 'bg-transparent'
+        }`}
       >
         <div className="padding-global">
-          <nav className="container-1200 flex items-center justify-between h-[4.5rem]">
-            {/* Logo */}
-            <Link href="/" className="text-white shrink-0">
+          {/* Use relative + absolute centering so nav items are ALWAYS centered in the full bar */}
+          <nav className="container-1200 relative flex items-center justify-between h-[4.5rem]">
+
+            {/* Logo — left */}
+            <Link href="/" className="text-white shrink-0 z-10">
               <OpusClipLogo />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-6" onClick={(e) => e.stopPropagation()}>
+            {/* Desktop Navigation — absolutely centered */}
+            <div
+              className="hidden lg:flex items-center gap-6 absolute left-1/2 -translate-x-1/2"
+              onClick={(e) => e.stopPropagation()}
+            >
               <NavDropdown
                 label={NAV_LINKS.features.label}
                 items={NAV_LINKS.features.items}
@@ -166,7 +173,7 @@ export default function Navbar() {
               />
               <Link
                 href="#pricing"
-                className="text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium"
+                className="text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
               >
                 Pricing
               </Link>
@@ -178,31 +185,34 @@ export default function Navbar() {
               />
               <Link
                 href="#agent-opus"
-                className="flex items-center gap-1.5 text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium"
+                className="flex items-center gap-1.5 text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
               >
                 Agent Opus
-                <span className="text-[10px] font-bold bg-[#f0b72f] text-black px-[6px] py-[1.5px] rounded border border-transparent">
+                <span className="text-[10px] font-bold bg-[#f0b72f] text-black px-[6px] py-[1.5px] rounded">
                   New
                 </span>
               </Link>
             </div>
 
-            {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-5">
+            {/* Desktop Actions — right */}
+            <div className="hidden lg:flex items-center gap-5 z-10">
               <Link
                 href="#"
-                className="text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium"
+                className="text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
               >
                 Sign in
               </Link>
-              <Link href={DASHBOARD_URL} className="bg-white text-black hover:bg-white/90 transition-colors rounded-full text-[15px] px-[18px] py-[9px] font-semibold">
+              <Link
+                href={DASHBOARD_URL}
+                className="bg-white text-black hover:bg-white/90 transition-colors rounded-full text-[15px] px-[18px] py-[9px] font-semibold whitespace-nowrap"
+              >
                 Sign up - It&apos;s FREE
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2"
+              className="lg:hidden p-2 z-10"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >

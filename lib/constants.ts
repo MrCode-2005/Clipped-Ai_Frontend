@@ -214,6 +214,7 @@ export const FOOTER_LINKS = {
       { label: 'Privacy Policy', href: '#' },
       { label: 'Cookies Preferences', href: '#' },
       { label: 'Accessibility Statement', href: '#' },
+      { label: 'Email protection', href: '#' },
       { label: 'Trust Center', href: '#' },
     ],
   },
