@@ -1,0 +1,232 @@
+// ===== Navigation Links =====
+export const NAV_LINKS = {
+  features: {
+    label: 'Features',
+    items: [
+      { label: 'ClipAnything', description: 'Clip any video type with AI', href: '#clip-anything' },
+      { label: 'AI B-Roll', description: 'Add AI-generated B-roll footage', href: '#ai-broll' },
+      { label: 'AI Voice-over', description: 'Generate natural voice-overs', href: '#ai-voiceover' },
+      { label: 'AI Captions', description: 'Auto-generate accurate captions', href: '#captions' },
+      { label: 'AI Reframe', description: 'Reframe videos for any platform', href: '#reframe' },
+    ],
+  },
+  solutions: {
+    label: 'Solutions',
+    items: [
+      { label: 'For Creators', href: '#creators' },
+      { label: 'For Marketers', href: '#marketers' },
+      { label: 'For Agencies', href: '#agencies' },
+      { label: 'For Podcasters', href: '#podcasters' },
+    ],
+  },
+  resources: {
+    label: 'Resources',
+    items: [
+      { label: 'Customer stories', href: '#' },
+      { label: 'Blog', href: '#' },
+      { label: 'Help center', href: '#' },
+      { label: 'Learning center', href: '#' },
+    ],
+  },
+  forBusiness: {
+    label: 'For business',
+    items: [
+      { label: 'Enterprise', href: '#' },
+      { label: 'API', href: '#' },
+    ],
+  },
+};
+
+export const DASHBOARD_URL = '#';
+export const PRICING_URL = '#pricing';
+export const AGENT_OPUS_URL = '#agent-opus';
+
+// ===== Hero Section =====
+export const HERO_CONTENT = {
+  badge: '#1 AI VIDEO CLIPPING TOOL',
+  heading: '1 long video, 10 viral clips. Create 10x faster.',
+  subheading: 'OpusClip turns long videos into shorts, and publishes them to all social platforms in one click.',
+  inputPlaceholder: 'Drop a video link',
+  ctaPrimary: 'Get free clips',
+  ctaSecondary: 'Upload files',
+};
+
+// ===== Trusted By Logos =====
+export const TRUSTED_BY_LOGOS = [
+  { name: 'NVIDIA', src: '/images/nvidia-logo.avif' },
+  { name: 'GitHub', src: '/images/github-logo.avif' },
+  { name: 'Visa', src: '/images/visa-logo.avif' },
+  { name: 'iHeartMedia', src: '/images/iheartmedia-logo.avif' },
+  { name: 'Audacy', src: '/images/audacy-logo.avif' },
+  { name: 'Telefonica', src: '/images/telefonica-logo.avif' },
+  { name: 'Univision', src: '/images/univision-logo.avif' },
+  { name: 'ZoomInfo', src: '/images/zoominfo-logo.avif' },
+  { name: 'Memphis Grizzlies', src: '/images/memphis-grizzlies-logo.avif' },
+  { name: 'Chili Piper', src: '/images/chili-piper-logo.avif' },
+];
+
+// ===== Feature Sections =====
+export const CLIP_ANYTHING = {
+  badge: 'CLIPANYTHING',
+  heading: 'AI that understands your videos like a human viewer',
+  description: 'Our ClipAnything model understands all visual, audio and sentiment cues throughout the video to find the best moments.',
+  image: '/images/clip-anything.avif',
+};
+
+export const AI_FEATURES = [
+  {
+    title: 'AI Voice-over',
+    description: 'Generate natural-sounding voice-overs in multiple languages and styles.',
+    image: '/images/ai-voice-over.avif',
+  },
+  {
+    title: 'AI B-Roll',
+    description: 'Automatically add relevant B-roll footage to enhance your clips.',
+    image: '/images/ai-broll.avif',
+  },
+];
+
+// ===== Scale Section =====
+export const SCALE_FEATURES = [
+  {
+    title: 'Brand templates',
+    description: 'Create consistent branded clips with custom templates, logos, and colors.',
+    image: '/images/brand-templates.avif',
+  },
+  {
+    title: 'Team workspace',
+    description: 'Collaborate with your team in a shared workspace with role-based access.',
+    image: '/images/team-workspace.avif',
+  },
+  {
+    title: 'Workflow integration',
+    description: 'Connect with your existing tools and automate your content pipeline.',
+    image: '/images/workflow-integration.avif',
+  },
+];
+
+// ===== Testimonials =====
+export const TESTIMONIALS = [
+  {
+    name: 'Karen V. Kitt, M.Ed.',
+    image: '/images/testimonial-karen.avif',
+    quote: 'OpusClip has transformed how I create content for my educational platform.',
+  },
+  {
+    name: 'JRAAH Podcast',
+    image: '/images/testimonial-jraahpodcast.avif',
+    quote: 'We went from posting 2 clips a week to 10+ with OpusClip.',
+  },
+  {
+    name: 'Veterans Archives',
+    image: '/images/testimonial-veteransarchives.avif',
+    quote: 'The AI knows exactly which moments resonate with our audience.',
+  },
+  {
+    name: 'Wake Up Warrior',
+    image: '/images/testimonial-wakeupwarrior.avif',
+    quote: 'Our social media engagement increased 300% after using OpusClip.',
+  },
+  {
+    name: 'Closeted Kicks Convos',
+    image: '/images/testimonial-closetedkicks.avif',
+    quote: 'The best content repurposing tool we have ever used.',
+  },
+];
+
+export const CREATOR_LOGOS = [
+  { name: 'Mark Rober', src: '/images/mark-rober.avif' },
+  { name: 'Lewis Howes', src: '/images/lewis-howes.avif' },
+  { name: 'Jason Lemkin', src: '/images/jason-lemkin.avif' },
+  { name: 'Jacksfilms', src: '/images/jacksfilms.avif' },
+  { name: 'Jubilee Media', src: '/images/jubilee-media.avif' },
+];
+
+// ===== FAQ =====
+export const FAQ_ITEMS = [
+  {
+    question: 'How does OpusClip work?',
+    answer: 'OpusClip leverages big data to analyze your video content in relation to the latest social and marketing trends from major platforms, and generates a comprehensive understanding of your video for a data-driven decision on content repurposing. It then picks the highlighting moments of your long video, rearranges them into a viral-worthy short and polishes it with dynamic captions, AI-relayout, smooth transition to ensure that the clip is coherent and attention-grabbing, and ends with a strong call-to-action.',
+  },
+  {
+    question: 'What types of videos can I upload?',
+    answer: 'You can use OpusClip to clip any video type with our newest model ClipAnything. Whether it\'s talking-head videos like podcasts and interviews, vlogs, sports, TV shows, or videos with little to no dialogue, ClipAnything understands all the visual, audio and sentiment cues throughout the video, and can clip the best moments from your video. You can also use natural language prompts to clip a specific moment.',
+  },
+  {
+    question: 'Which languages are supported?',
+    answer: 'We support English, German, Spanish, French, Portuguese, Italian, Dutch, Russian, Polish, Indonesian, Ukrainian, Swedish, Turkish, Norwegian, Croatian, Romanian, Slovak, Greek, Danish, Finnish, Hungarian, Czech, Japanese, Korean, Vietnamese and more to come.',
+  },
+  {
+    question: 'Can I add captions?',
+    answer: 'Absolutely! In fact, OpusClip automatically adds captions for you with over 97% accuracy! You can change text and edit it freely.',
+  },
+  {
+    question: 'Is OpusClip free to use?',
+    answer: 'OpusClip is free to use. If you are a new user, you will enjoy a 7-day free trial of our Pro Plan, which gives you 90 minutes of video processing time (~30 downloadable clips). Once your free trial ends, you can either upgrade to paid subscription, or use our free-forever plan with 60 minutes of video processing time refreshed monthly. We offer paid subscription plans with flexible upload credits, available on both a monthly and yearly basis.',
+  },
+  {
+    question: 'I have more questions!',
+    answer: 'Please join our Discord or email us at support@opus.pro if you need help or have any questions or advice for us.',
+  },
+];
+
+// ===== Footer =====
+export const FOOTER_LINKS = {
+  company: {
+    title: 'Company',
+    links: [
+      { label: 'About us', href: '#' },
+      { label: 'Careers', href: '#', badge: "We're hiring!" },
+      { label: 'Contact Us', href: '#' },
+    ],
+  },
+  product: {
+    title: 'Product',
+    links: [
+      { label: 'Tools', href: '#' },
+      { label: 'Product changelog', href: '#' },
+      { label: 'Feature Request', href: '#' },
+      { label: 'OpusClip Captions', href: '#', badge: 'Free' },
+      { label: 'How does OpusClip work', href: '#' },
+    ],
+  },
+  resources: {
+    title: 'Resources',
+    links: [
+      { label: 'Customer stories', href: '#' },
+      { label: 'Blogs', href: '#' },
+      { label: 'Become an affiliate', href: '#' },
+      { label: 'OpusClip media assets', href: '#' },
+      { label: 'Help center', href: '#' },
+      { label: 'Learning center', href: '#' },
+    ],
+  },
+  bestPractices: {
+    title: 'Best Practices',
+    links: [
+      { label: 'Hidden strategy top creators use to turn clips into 4M+ long-form views', href: '#' },
+      { label: "MrBeast's Vyro: Everything You Need to Know", href: '#' },
+      { label: 'From zero to monetization for a new YouTube channel in 40 days', href: '#' },
+      { label: 'How to Turn Long Videos into Viral Shorts: The Ultimate Guide for 2026', href: '#' },
+    ],
+  },
+  trustAndLegal: {
+    title: 'Trust and Legal',
+    links: [
+      { label: 'Terms and Conditions', href: '#' },
+      { label: 'Privacy Policy', href: '#' },
+      { label: 'Cookies Preferences', href: '#' },
+      { label: 'Accessibility Statement', href: '#' },
+      { label: 'Trust Center', href: '#' },
+    ],
+  },
+};
+
+export const SOCIAL_LINKS = [
+  { name: 'YouTube', href: 'https://www.youtube.com/@opusclip' },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@opusclip' },
+  { name: 'Twitter', href: 'https://twitter.com/opusclip' },
+  { name: 'Discord', href: 'https://discord.com/invite/wqbb7ZKhjg' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/opusclip' },
+  { name: 'Instagram', href: 'https://www.instagram.com/opusclip/' },
+];
