@@ -95,17 +95,15 @@ export default function HeroCarousel() {
             return (
               <motion.div
                 key={item.id}
-                // Changed from object-cover cropping format to object-contain within a dark card 
-                className="absolute w-full max-w-[1020px] h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-[#0F0F0F] md:bg-[#161616]"
+                // Central card is 1000px wide, exactly mapping Opus.pro container
+                className="absolute w-full max-w-[1000px] h-full rounded-[24px] overflow-hidden bg-[#1D1D21] transition-shadow duration-500"
                 initial={{ 
-                  x: `${offset * 105}%`, // Provides a 5% gap between the 1020px responsive cards
-                  scale: offset === 0 ? 1 : 0.85,
-                  opacity: offset === 0 ? 1 : 0.4
+                  x: `calc(${offset * 100}% + ${offset * 30}px)`, 
+                  opacity: offset === 0 ? 1 : 0.6,
                 }}
                 animate={{
-                  x: `${offset * 105}%`,
-                  scale: offset === 0 ? 1 : 0.85,
-                  opacity: offset === 0 ? 1 : 0.4,
+                  x: `calc(${offset * 100}% + ${offset * 30}px)`,
+                  opacity: offset === 0 ? 1 : 0.6,
                   zIndex: offset === 0 ? 20 : 10,
                 }}
                 transition={{
@@ -125,42 +123,43 @@ export default function HeroCarousel() {
           })}
         </AnimatePresence>
 
-        <div className="absolute top-1/2 -translate-y-1/2 left-[calc(50%-min(50vw-16px,510px+64px))] md:left-[calc(50%-min(50vw-32px,510px+80px))] z-30">
+        {/* Navigation Buttons placed purely outside the 1000px logic bounding so they never overlap media */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-[calc(50%-min(50vw-16px,500px+56px))] sm:left-[calc(50%-min(50vw-24px,500px+64px))] xl:left-[calc(50%-500px-70px)] z-30">
           <button
             onClick={handlePrev}
-            className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#1C1C1C] hover:bg-white/10 text-white rounded-full transition-colors group"
+            className="w-10 h-10 md:w-[44px] md:h-[44px] flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 text-white rounded-full transition-colors group"
             aria-label="Previous Slide"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" className="opacity-70 group-hover:opacity-100 transition-opacity"><path fill="currentColor" fillRule="evenodd" d="M12.29 2.951a.9.9 0 0 1 .026 1.273l-6.601 6.877h14.688a.9.9 0 1 1 0 1.8H5.715l6.601 6.876a.9.9 0 1 1-1.298 1.247l-8.064-8.4a.9.9 0 0 1 0-1.247l8.064-8.4a.9.9 0 0 1 1.272-.026" clipRule="evenodd"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" className="opacity-80 group-hover:opacity-100 transition-opacity"><path fill="currentColor" fillRule="evenodd" d="M12.29 2.951a.9.9 0 0 1 .026 1.273l-6.601 6.877h14.688a.9.9 0 1 1 0 1.8H5.715l6.601 6.876a.9.9 0 1 1-1.298 1.247l-8.064-8.4a.9.9 0 0 1 0-1.247l8.064-8.4a.9.9 0 0 1 1.272-.026" clipRule="evenodd"></path></svg>
           </button>
         </div>
 
-        <div className="absolute top-1/2 -translate-y-1/2 right-[calc(50%-min(50vw-16px,510px+64px))] md:right-[calc(50%-min(50vw-32px,510px+80px))] z-30">
+        <div className="absolute top-1/2 -translate-y-1/2 right-[calc(50%-min(50vw-16px,500px+56px))] sm:right-[calc(50%-min(50vw-24px,500px+64px))] xl:right-[calc(50%-500px-70px)] z-30">
           <button
             onClick={handleNext}
-            className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#1C1C1C] hover:bg-white/10 text-white rounded-full transition-colors group"
+            className="w-10 h-10 md:w-[44px] md:h-[44px] flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 text-white rounded-full transition-colors group"
             aria-label="Next Slide"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" className="opacity-70 group-hover:opacity-100 transition-opacity"><path fill="currentColor" fillRule="evenodd" d="M11.71 21.049a.9.9 0 0 1-.026-1.273l6.601-6.877H3.597a.9.9 0 1 1 0-1.8h14.688l-6.601-6.876a.9.9 0 0 1 1.298-1.247l8.064 8.4a.9.9 0 0 1 0 1.247l-8.064 8.4a.9.9 0 0 1-1.272.026" clipRule="evenodd"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" className="opacity-80 group-hover:opacity-100 transition-opacity"><path fill="currentColor" fillRule="evenodd" d="M11.71 21.049a.9.9 0 0 1-.026-1.273l6.601-6.877H3.597a.9.9 0 1 1 0-1.8h14.688l-6.601-6.876a.9.9 0 0 1 1.298-1.247l8.064 8.4a.9.9 0 0 1 0 1.247l-8.064 8.4a.9.9 0 0 1-1.272.026" clipRule="evenodd"></path></svg>
           </button>
         </div>
       </div>
 
       {/* Pagination Thumbs Selector */}
-      <div className="flex justify-center flex-wrap gap-2 md:gap-4 mt-8 md:mt-12 w-full max-w-[900px] mx-auto opacity-90 px-4">
+      <div className="flex justify-center flex-nowrap items-center overflow-x-auto snap-x gap-[12px] md:gap-[16px] mt-6 md:mt-10 mx-auto w-full max-w-[1200px] px-[5%] pb-4 scrollbar-hide">
         {carouselItems.map((item, index) => {
           const isActive = index === currentIndex;
           return (
             <button
               key={item.id}
               onClick={() => setCurrentIndex(index)}
-              className={`flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all duration-300 text-[12px] md:text-[14px] font-medium ${
+              className={`flex items-center gap-[8px] px-4 py-2.5 md:px-[24px] md:py-[12px] rounded-full whitespace-nowrap border transition-all duration-300 text-[12px] md:text-[14px] font-medium shrink-0 snap-center ${
                 isActive 
-                  ? 'bg-white/10 text-white scale-105 shadow-sm' 
-                  : 'text-white/60 hover:text-white/90 hover:bg-white/5'
+                  ? 'border-white/30 bg-white/10 text-white opacity-100' 
+                  : 'border-white/10 bg-transparent text-white/60 hover:text-white/90 hover:bg-white/5 opacity-60 hover:opacity-100'
               }`}
             >
-              <div className={`w-[14px] md:w-[18px] h-[14px] md:h-[18px] opacity-80 ${isActive ? 'opacity-100' : ''}`}>
+              <div className={`w-[14px] md:w-[16px] h-[14px] md:h-[16px]`}>
                 {item.thumbIcon}
               </div>
               {item.thumbText}
