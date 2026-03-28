@@ -56,7 +56,7 @@ function NavDropdown({ label, items, isOpen, onToggle }: DropdownProps) {
     <div className="relative" ref={ref}>
       <button
         onClick={onToggle}
-        className="flex items-center gap-1 text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium"
+        className="flex items-center gap-1 text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
         aria-expanded={isOpen}
       >
         {label}
