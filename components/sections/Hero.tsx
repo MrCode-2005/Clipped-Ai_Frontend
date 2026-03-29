@@ -44,52 +44,50 @@ export default function Hero() {
 
           {/* Main Heading */}
           <FadeIn delay={0.1} className="text-center mb-6 w-full lg:max-w-[1200px] xl:max-w-[1400px] mx-auto px-4">
-            <h1 className="text-[44px] sm:text-[56px] md:text-[60px] lg:text-[70px] xl:text-[78px] font-bold leading-[1.05] tracking-tight text-white whitespace-normal lg:whitespace-nowrap">
+            <h1 className="text-[44px] sm:text-[56px] md:text-[60px] lg:text-[64px] xl:text-[68px] font-extrabold leading-[1.05] tracking-tight text-white max-w-[1100px] mx-auto">
               {HERO_CONTENT.heading}
             </h1>
           </FadeIn>
 
           {/* Subheading */}
           <FadeIn delay={0.2} className="text-center mb-10 w-full max-w-[900px] mx-auto px-4">
-            <p className="text-[16px] md:text-[20px] text-[#D1D1D1] leading-[1.6] font-normal whitespace-normal lg:whitespace-nowrap">
+            <p className="text-[16px] md:text-[20px] text-[#D1D1D1] leading-[1.6] font-normal">
               {HERO_CONTENT.subheading}
             </p>
           </FadeIn>
 
           {/* CTA Area */}
           <FadeIn delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 px-4">
-            {/* Video link input + Get free clips */}
+            {/* Video link input + Get free clips combined pill */}
             <form
               onSubmit={handleSubmit}
-              className="flex items-center bg-[#1C1C1C] rounded-full
-                         overflow-hidden w-full sm:w-auto flex-1 max-w-[500px]
-                         transition-all duration-300"
+              className="flex items-center bg-[#1C1C1C] border border-white/10 rounded-full overflow-hidden w-full sm:w-auto flex-1 max-w-[480px] p-1.5 transition-all duration-300"
             >
-              <div className="flex items-center pl-6 pr-2 py-1 flex-1">
-                <LinkIcon />
+              <div className="flex items-center pl-4 pr-1 gap-2 flex-1 min-w-[140px]">
+                <span className="text-white/60 shrink-0">
+                  <LinkIcon />
+                </span>
                 <input
                   type="text"
                   value={videoLink}
                   onChange={(e) => setVideoLink(e.target.value)}
                   placeholder="Drop a video link"
-                  className="bg-transparent border-none outline-none text-white placeholder:text-white/50
-                             text-[16px] w-full py-[16px] ml-3 font-medium"
+                  className="bg-transparent border-none outline-none text-white placeholder:text-white/50 text-[15px] font-medium w-full min-w-0"
                 />
               </div>
+              <button
+                type="submit"
+                className="bg-white text-black hover:bg-white/90 transition-colors rounded-full px-7 py-[12px] text-[15px] font-semibold shrink-0"
+              >
+                Get free clips
+              </button>
             </form>
 
-            <button
-              onClick={handleSubmit}
-              className="bg-white text-black hover:bg-white/90 transition-colors rounded-full px-8 py-[16px] text-[16px] font-semibold shrink-0 w-full sm:w-auto"
-            >
-              Get free clips
-            </button>
-
             {/* Separator */}
-            <span className="text-white/60 text-[16px] font-normal mx-2 hidden sm:block">or</span>
+            <span className="text-[#a1a1a1] text-[15px] font-medium mx-1 hidden sm:block">or</span>
 
             {/* Upload files button */}
-            <button className="rounded-full px-8 py-[15px] text-[16px] font-medium w-full sm:w-auto text-white border border-white/20 hover:bg-white/5 transition-colors">
+            <button className="rounded-full px-8 py-[13px] text-[15px] font-medium w-full sm:w-auto text-white border border-white/10 bg-transparent hover:bg-white/5 transition-colors shrink-0">
               Upload files
             </button>
           </FadeIn>
