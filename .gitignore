@@ -41,3 +41,6 @@ copy.js
 creators.json
 get_svgs.js
 parse_creators.js
+
+# scraped html code
+public/*.html
