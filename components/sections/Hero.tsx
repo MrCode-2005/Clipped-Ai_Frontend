@@ -43,8 +43,11 @@ export default function Hero() {
           </FadeIn>
 
           {/* Main Heading */}
-          <FadeIn delay={0.1} className="text-center mb-6 w-full lg:max-w-[1200px] xl:max-w-[1400px] mx-auto px-4">
-            <h1 className="text-[44px] sm:text-[56px] md:text-[60px] lg:text-[64px] xl:text-[68px] font-extrabold leading-[1.05] tracking-tight text-white max-w-[1100px] mx-auto">
+          <FadeIn delay={0.1} className="text-center mb-6 w-full max-w-[1160px] mx-auto px-4 md:px-10">
+            <h1
+              className="text-[44px] sm:text-[56px] lg:text-[72px] font-bold leading-[1.1] tracking-[-0.01em] text-white w-full mx-auto md:whitespace-nowrap"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
               {HERO_CONTENT.heading}
             </h1>
           </FadeIn>
