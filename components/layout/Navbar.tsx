@@ -139,18 +139,17 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="padding-global">
-          {/* Use relative + absolute centering so nav items are ALWAYS centered in the full bar */}
-          <nav className="container-1200 relative flex items-center justify-between h-[4.5rem]">
+        <div className="w-full max-w-[1328px] mx-auto px-6 md:px-8">
+          <nav className="relative flex items-center justify-between h-[4.5rem]">
 
             {/* Logo — left */}
-            <Link href="/" className="text-white shrink-0 z-10">
+            <Link href="/" className="text-white shrink-0 z-10 w-[200px]">
               <OpusClipLogo />
             </Link>
 
-            {/* Desktop Navigation — absolutely centered */}
+            {/* Desktop Navigation — flex centered between left and right */}
             <div
-              className="hidden lg:flex items-center gap-6 absolute left-1/2 -translate-x-1/2"
+              className="hidden lg:flex flex-1 items-center justify-center gap-6"
               onClick={(e) => e.stopPropagation()}
             >
               <NavDropdown
@@ -195,16 +194,16 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Actions — right */}
-            <div className="hidden lg:flex items-center gap-5 z-10">
+            <div className="hidden lg:flex items-center justify-end gap-5 z-10 w-[200px]">
               <Link
                 href="#"
-                className="text-text-secondary hover:text-white transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
+                className="text-[#999999] hover:text-white transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
               >
                 Sign in
               </Link>
               <Link
                 href={DASHBOARD_URL}
-                className="bg-white text-black hover:bg-white/90 transition-colors rounded-full text-[15px] px-[18px] py-[9px] font-semibold whitespace-nowrap"
+                className="bg-white text-black hover:bg-white/90 transition-colors rounded-[8px] text-[15px] px-[16px] py-[8px] font-semibold whitespace-nowrap"
               >
                 Sign up - It&apos;s FREE
               </Link>
