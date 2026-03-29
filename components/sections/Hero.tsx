@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { HERO_CONTENT, CREATOR_LOGOS } from '@/lib/constants';
 import FadeIn from '@/components/animations/FadeIn';
-import HeroCarousel from '@/components/ui/HeroCarousel';
 
 function LinkIcon() {
   return (
@@ -98,10 +97,19 @@ export default function Hero() {
             </button>
           </FadeIn>
 
-          {/* Hero Video/Image showcase */}
+          {/* Hero Animated Video showcase */}
           <FadeIn delay={0.4}>
-            <div className="relative max-w-[1400px] mx-auto mt-10">
-              <HeroCarousel />
+            <div className="relative w-full max-w-[1200px] mx-auto mt-10 md:mt-16 sm:px-4 lg:px-0">
+              <div className="relative w-full rounded-[24px] md:rounded-[32px] overflow-hidden bg-[#15151A] border border-white/5 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                <video
+                  src="/assests/animation/HeroSection_animation_video.mov"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto object-contain pointer-events-none"
+                />
+              </div>
             </div>
           </FadeIn>
         </div>
