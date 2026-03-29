@@ -147,7 +147,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* Pagination Thumbs Selector */}
-      <div className="flex justify-center flex-nowrap items-center overflow-x-auto snap-x gap-[6px] sm:gap-[10px] md:gap-[12px] mt-6 md:mt-10 mx-auto w-full max-w-[1200px] px-[2%] pb-4 scrollbar-hide">
+      <div className="flex justify-center flex-nowrap items-center overflow-x-auto snap-x gap-[6px] sm:gap-[10px] md:gap-[12px] mt-3 md:mt-4 mx-auto w-full max-w-[1200px] px-[2%] pb-4 scrollbar-hide">
         {carouselItems.map((item, index) => {
           const isActive = index === currentIndex;
           return (
