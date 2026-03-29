@@ -78,7 +78,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden px-4 md:px-0 py-6 md:py-10">
+    <div className="relative w-full overflow-hidden px-4 md:px-0 pt-2 pb-6 md:pb-10">
       
       {/* Container holding the carousel tracks */}
       <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">

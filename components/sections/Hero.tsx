@@ -63,7 +63,7 @@ export default function Hero() {
           </FadeIn>
 
           {/* CTA Area */}
-          <FadeIn delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 px-4">
+          <FadeIn delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-2 px-4">
             {/* Video link input + Get free clips combined pill */}
             <form
               onSubmit={handleSubmit}
@@ -100,7 +100,7 @@ export default function Hero() {
 
           {/* Hero Video/Image showcase */}
           <FadeIn delay={0.4}>
-            <div className="relative max-w-[1400px] mx-auto mt-10">
+            <div className="relative max-w-[1400px] mx-auto mt-0">
               <HeroCarousel />
             </div>
           </FadeIn>
