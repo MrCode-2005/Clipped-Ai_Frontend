@@ -11,10 +11,11 @@ import CTASection from '@/components/sections/CTASection';
 import Footer from '@/components/layout/Footer';
 import CookieBanner from '@/components/layout/CookieBanner';
 import FloatingCTA from '@/components/ui/FloatingCTA';
+import SharedLayoutProvider from '@/components/animations/SharedLayoutProvider';
 
 export default function HomePage() {
   return (
-    <>
+    <SharedLayoutProvider>
       <Navbar />
       <main>
         <Hero />
@@ -30,6 +31,6 @@ export default function HomePage() {
       <Footer />
       <CookieBanner />
       <FloatingCTA />
-    </>
+    </SharedLayoutProvider>
   );
 }

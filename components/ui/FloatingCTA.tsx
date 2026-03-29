@@ -46,8 +46,8 @@ export default function FloatingCTA() {
       const ctaEl = document.getElementById('cta-card-section');
       if (ctaEl) {
         const rect = ctaEl.getBoundingClientRect();
-        // When the CTA card is less than 60% of viewport height away, hide the pill
-        setCtaReached(rect.top < window.innerHeight * 0.75);
+        // Match the -15% bottom margin exactly used in CTASection's useInView
+        setCtaReached(rect.top <= window.innerHeight * 0.85);
       }
     };
 
@@ -73,7 +73,8 @@ export default function FloatingCTA() {
           transition={{ type: 'spring', stiffness: 360, damping: 30 }}
           className="fixed bottom-6 left-0 right-0 z-50 flex justify-center pointer-events-none px-4"
         >
-          <form
+          <motion.form
+            layoutId="cta-input-bar"
             onSubmit={handleSubmit}
             className="pointer-events-auto flex items-center bg-[#191919] border border-white/10 rounded-full shadow-[0_8px_40px_rgba(0,0,0,0.6)] overflow-hidden"
             style={{ backdropFilter: 'blur(16px)' }}
@@ -96,7 +97,7 @@ export default function FloatingCTA() {
             >
               Get free clips
             </button>
-          </form>
+          </motion.form>
         </motion.div>
       )}
     </AnimatePresence>

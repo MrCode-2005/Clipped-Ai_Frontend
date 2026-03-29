@@ -91,33 +91,33 @@ export default function CTASection() {
                 </motion.h2>
 
                 {/* Embedded input bar */}
-                <motion.form
-                  onSubmit={handleSubmit}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                  transition={{ duration: 0.45, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                  className="flex items-center w-full max-w-[520px] bg-white/10 border border-white/20 rounded-full overflow-hidden"
-                  style={{ backdropFilter: 'blur(12px)' }}
-                >
-                  <div className="flex items-center pl-5 pr-2 py-1 gap-2 flex-1">
-                    <span className="text-white shrink-0">
-                      <LinkIcon />
-                    </span>
-                    <input
-                      type="text"
-                      value={videoLink}
-                      onChange={(e) => setVideoLink(e.target.value)}
-                      placeholder="Drop a video link"
-                      className="bg-transparent border-none outline-none text-white placeholder:text-white/50 text-[15px] font-medium py-[14px] w-full min-w-0"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="bg-white text-black text-[15px] font-semibold px-6 py-[14px] rounded-full mr-1 hover:bg-white/90 transition-colors shrink-0"
+                {isInView && (
+                  <motion.form
+                    layoutId="cta-input-bar"
+                    onSubmit={handleSubmit}
+                    className="flex items-center w-full max-w-[520px] bg-white/10 border border-white/20 rounded-full overflow-hidden"
+                    style={{ backdropFilter: 'blur(12px)' }}
                   >
-                    Get free clips
-                  </button>
-                </motion.form>
+                    <div className="flex items-center pl-5 pr-2 py-1 gap-2 flex-1">
+                      <span className="text-white shrink-0">
+                        <LinkIcon />
+                      </span>
+                      <input
+                        type="text"
+                        value={videoLink}
+                        onChange={(e) => setVideoLink(e.target.value)}
+                        placeholder="Drop a video link"
+                        className="bg-transparent border-none outline-none text-white placeholder:text-white/50 text-[15px] font-medium py-[14px] w-full min-w-0"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="bg-white text-black text-[15px] font-semibold px-6 py-[14px] rounded-full mr-1 hover:bg-white/90 transition-colors shrink-0"
+                    >
+                      Get free clips
+                    </button>
+                  </motion.form>
+                )}
               </div>
             </motion.div>
           </div>
