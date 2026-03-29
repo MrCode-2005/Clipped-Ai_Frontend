@@ -35,3 +35,9 @@ next-env.d.ts
 # gemini/agent state
 /tmp/
 .cache/
+
+# utility scripts (not needed for frontend deployment)
+copy.js
+creators.json
+get_svgs.js
+parse_creators.js

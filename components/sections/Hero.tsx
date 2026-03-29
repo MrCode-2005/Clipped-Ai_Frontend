@@ -43,12 +43,12 @@ export default function Hero() {
           </FadeIn>
 
           {/* Main Heading */}
-          <FadeIn delay={0.1} className="text-center mb-6 w-full max-w-[1440px] mx-auto px-4 sm:px-10 lg:px-20">
+          <FadeIn delay={0.1} className="text-center mb-6 w-full max-w-[1500px] mx-auto px-4">
             <h1
-              className="font-bold leading-[1.1] tracking-[-0.01em] text-white w-full mx-auto"
+              className="font-bold leading-[1.1] tracking-[-0.02em] text-white w-full mx-auto"
               style={{
                 fontFamily: "'Poppins', sans-serif",
-                fontSize: 'clamp(1.75rem, 4.2vw, 4rem)',
+                fontSize: 'clamp(1.5rem, 3.3vw, 3.25rem)',
               }}
             >
               {HERO_CONTENT.heading}
