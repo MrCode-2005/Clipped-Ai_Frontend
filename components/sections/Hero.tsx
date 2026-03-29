@@ -43,15 +43,15 @@ export default function Hero() {
           </FadeIn>
 
           {/* Main Heading */}
-          <FadeIn delay={0.1} className="text-center mb-6 max-w-[1000px] mx-auto">
-            <h1 className="text-[44px] sm:text-[56px] md:text-[72px] lg:text-[80px] font-bold leading-[1.05] tracking-tight text-white px-4">
+          <FadeIn delay={0.1} className="text-center mb-6 w-full lg:max-w-[1200px] xl:max-w-[1400px] mx-auto px-4">
+            <h1 className="text-[44px] sm:text-[56px] md:text-[60px] lg:text-[70px] xl:text-[78px] font-bold leading-[1.05] tracking-tight text-white whitespace-normal lg:whitespace-nowrap">
               {HERO_CONTENT.heading}
             </h1>
           </FadeIn>
 
           {/* Subheading */}
-          <FadeIn delay={0.2} className="text-center mb-10 max-w-[700px] mx-auto">
-            <p className="text-[16px] md:text-[20px] text-[#D1D1D1] leading-[1.6] font-normal px-4">
+          <FadeIn delay={0.2} className="text-center mb-10 w-full max-w-[900px] mx-auto px-4">
+            <p className="text-[16px] md:text-[20px] text-[#D1D1D1] leading-[1.6] font-normal whitespace-normal lg:whitespace-nowrap">
               {HERO_CONTENT.subheading}
             </p>
           </FadeIn>
