@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const carouselItems = [
   { 
-    id: 1, type: 'video', src: '/assests/animation/animation.mov', thumbText: 'AI clipping', 
+    id: 1, type: 'video', src: '/assests/animation/HeroSection_animation_video.mov', thumbText: 'AI clipping', 
     thumbIcon: <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18"><path fill="currentColor" fillRule="evenodd" d="M4.875 3a2.625 2.625 0 0 1 2.537 3.294l2.637 1.798 4.528-3.087a.75.75 0 0 1 .845 1.24L11.38 8.999l4.042 2.756a.75.75 0 0 1-.845 1.24l-4.528-3.088-2.637 1.799q.085.321.087.669a2.625 2.625 0 1 1-.87-1.951l2.088-1.425L6.63 7.575A2.625 2.625 0 1 1 4.875 3m0 8.25a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25m0-6.75a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25" clipRule="evenodd"></path></svg> 
   },
   { 
