@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-radial from-accent-blue/5 via-transparent to-transparent pointer-events-none" />
 
       <div className="padding-global">
-        <div className="container-1200 pt-[40px] md:pt-[60px] lg:pt-[80px] pb-8 md:pb-12">
+        <div className="container-1200 pt-[40px] md:pt-[60px] lg:pt-[80px] pb-0">
           {/* Badge */}
           <FadeIn className="text-center mb-6">
             <span className="text-[12px] md:text-[14px] font-bold uppercase tracking-[0.1em] text-white">
