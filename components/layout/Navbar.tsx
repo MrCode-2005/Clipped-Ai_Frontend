@@ -194,12 +194,18 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Actions — right */}
-            <div className="hidden lg:flex items-center justify-end gap-5 z-10 w-[200px]">
+            <div className="hidden lg:flex items-center justify-end gap-5 z-10 min-w-[200px]">
               <Link
-                href={DASHBOARD_URL}
+                href="/signin"
                 className="text-white hover:text-white/80 transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
               >
-                My dashboard
+                Sign in
+              </Link>
+              <Link
+                href="/signup"
+                className="bg-white text-black hover:bg-white/90 transition-colors duration-200 text-[14px] font-semibold whitespace-nowrap px-4 py-[10px] rounded-[10px]"
+              >
+                Sign up - It's FREE
               </Link>
             </div>
 
