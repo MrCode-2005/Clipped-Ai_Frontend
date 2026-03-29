@@ -45,7 +45,7 @@ export const AGENT_OPUS_URL = '#agent-opus';
 export const HERO_CONTENT = {
   badge: '#1 AI VIDEO CLIPPING TOOL',
   heading: '1 long video, 10 viral clips. Create 10x faster.',
-  subheading: 'OpusClip turns long videos into shorts, and publishes them to all social platforms in one click.',
+  subheading: 'ClippedAi turns long videos into shorts, and publishes them to all social platforms in one click.',
   inputPlaceholder: 'Drop a video link',
   ctaPrimary: 'Get free clips',
   ctaSecondary: 'Upload files',
@@ -107,12 +107,12 @@ export const TESTIMONIALS = [
   {
     name: 'Karen V. Kitt, M.Ed.',
     image: '/images/testimonial-karen.avif',
-    quote: 'OpusClip has transformed how I create content for my educational platform.',
+    quote: 'ClippedAi has transformed how I create content for my educational platform.',
   },
   {
     name: 'JRAAH Podcast',
     image: '/images/testimonial-jraahpodcast.avif',
-    quote: 'We went from posting 2 clips a week to 10+ with OpusClip.',
+    quote: 'We went from posting 2 clips a week to 10+ with ClippedAi.',
   },
   {
     name: 'Veterans Archives',
@@ -122,7 +122,7 @@ export const TESTIMONIALS = [
   {
     name: 'Wake Up Warrior',
     image: '/images/testimonial-wakeupwarrior.avif',
-    quote: 'Our social media engagement increased 300% after using OpusClip.',
+    quote: 'Our social media engagement increased 300% after using ClippedAi.',
   },
   {
     name: 'Closeted Kicks Convos',
@@ -142,12 +142,12 @@ export const CREATOR_LOGOS = [
 // ===== FAQ =====
 export const FAQ_ITEMS = [
   {
-    question: 'How does OpusClip work?',
-    answer: 'OpusClip leverages big data to analyze your video content in relation to the latest social and marketing trends from major platforms, and generates a comprehensive understanding of your video for a data-driven decision on content repurposing. It then picks the highlighting moments of your long video, rearranges them into a viral-worthy short and polishes it with dynamic captions, AI-relayout, smooth transition to ensure that the clip is coherent and attention-grabbing, and ends with a strong call-to-action.',
+    question: 'How does ClippedAi work?',
+    answer: 'ClippedAi leverages big data to analyze your video content in relation to the latest social and marketing trends from major platforms, and generates a comprehensive understanding of your video for a data-driven decision on content repurposing. It then picks the highlighting moments of your long video, rearranges them into a viral-worthy short and polishes it with dynamic captions, AI-relayout, smooth transition to ensure that the clip is coherent and attention-grabbing, and ends with a strong call-to-action.',
   },
   {
     question: 'What types of videos can I upload?',
-    answer: 'You can use OpusClip to clip any video type with our newest model ClipAnything. Whether it\'s talking-head videos like podcasts and interviews, vlogs, sports, TV shows, or videos with little to no dialogue, ClipAnything understands all the visual, audio and sentiment cues throughout the video, and can clip the best moments from your video. You can also use natural language prompts to clip a specific moment.',
+    answer: 'You can use ClippedAi to clip any video type with our newest model ClipAnything. Whether it\'s talking-head videos like podcasts and interviews, vlogs, sports, TV shows, or videos with little to no dialogue, ClipAnything understands all the visual, audio and sentiment cues throughout the video, and can clip the best moments from your video. You can also use natural language prompts to clip a specific moment.',
   },
   {
     question: 'Which languages are supported?',
@@ -155,11 +155,11 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Can I add captions?',
-    answer: 'Absolutely! In fact, OpusClip automatically adds captions for you with over 97% accuracy! You can change text and edit it freely.',
+    answer: 'Absolutely! In fact, ClippedAi automatically adds captions for you with over 97% accuracy! You can change text and edit it freely.',
   },
   {
-    question: 'Is OpusClip free to use?',
-    answer: 'OpusClip is free to use. If you are a new user, you will enjoy a 7-day free trial of our Pro Plan, which gives you 90 minutes of video processing time (~30 downloadable clips). Once your free trial ends, you can either upgrade to paid subscription, or use our free-forever plan with 60 minutes of video processing time refreshed monthly. We offer paid subscription plans with flexible upload credits, available on both a monthly and yearly basis.',
+    question: 'Is ClippedAi free to use?',
+    answer: 'ClippedAi is free to use. If you are a new user, you will enjoy a 7-day free trial of our Pro Plan, which gives you 90 minutes of video processing time (~30 downloadable clips). Once your free trial ends, you can either upgrade to paid subscription, or use our free-forever plan with 60 minutes of video processing time refreshed monthly. We offer paid subscription plans with flexible upload credits, available on both a monthly and yearly basis.',
   },
   {
     question: 'I have more questions!',
@@ -183,8 +183,8 @@ export const FOOTER_LINKS = {
       { label: 'Tools', href: '#' },
       { label: 'Product changelog', href: '#' },
       { label: 'Feature Request', href: '#' },
-      { label: 'OpusClip Captions', href: '#', badge: 'Free' },
-      { label: 'How does OpusClip work', href: '#' },
+      { label: 'ClippedAi Captions', href: '#', badge: 'Free' },
+      { label: 'How does ClippedAi work', href: '#' },
     ],
   },
   resources: {
@@ -193,7 +193,7 @@ export const FOOTER_LINKS = {
       { label: 'Customer stories', href: '#' },
       { label: 'Blogs', href: '#' },
       { label: 'Become an affiliate', href: '#' },
-      { label: 'OpusClip media assets', href: '#' },
+      { label: 'ClippedAi media assets', href: '#' },
       { label: 'Help center', href: '#' },
       { label: 'Learning center', href: '#' },
     ],

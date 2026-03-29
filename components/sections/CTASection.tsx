@@ -48,7 +48,7 @@ export default function CTASection() {
         id="cta-card-section"
         ref={sectionRef}
         className="py-8 pb-16 bg-background"
-        aria-label="Get started with OpusClip"
+        aria-label="Get started with ClippedAi"
       >
         <div className="padding-global">
           <div className="container-1200">
@@ -87,7 +87,7 @@ export default function CTASection() {
                   transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                   className="text-[36px] md:text-[48px] font-bold leading-[1.1] tracking-tight text-white"
                 >
-                  Get started with OpusClip
+                  Get started with ClippedAi
                 </motion.h2>
 
                 {/* Embedded input bar */}

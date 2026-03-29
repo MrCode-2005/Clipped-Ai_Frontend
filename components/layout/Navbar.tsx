@@ -31,13 +31,13 @@ function CloseIcon() {
   );
 }
 
-function OpusClipLogo() {
+function ClippedAiLogo() {
   return (
     <div className="flex items-center gap-[6px]">
       <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" clipRule="evenodd" d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM21.4706 16.8927C22.0543 16.5126 22.0543 15.4874 21.4706 15.1073L13.8863 10.1558C13.2435 9.73696 12.3871 10.1992 12.3871 11.0485V20.9515C12.3871 21.8008 13.2435 22.263 13.8863 21.8442L21.4706 16.8927Z" fill="currentColor"/>
       </svg>
-      <span className="text-[22px] font-bold tracking-[-0.03em]">OpusClip</span>
+      <span className="text-[22px] font-bold tracking-[-0.03em]">ClippedAi</span>
     </div>
   );
 }
@@ -144,7 +144,7 @@ export default function Navbar() {
 
             {/* Logo — left */}
             <Link href="/" className="text-white shrink-0 z-10 w-[200px]">
-              <OpusClipLogo />
+                <ClippedAiLogo />
             </Link>
 
             {/* Desktop Navigation — flex centered between left and right */}
@@ -246,7 +246,7 @@ export default function Navbar() {
               {/* Mobile menu header */}
               <div className="flex items-center justify-between p-5 border-b border-border">
                 <Link href="/" className="text-white" onClick={() => setIsMobileMenuOpen(false)}>
-                  <OpusClipLogo />
+                    <ClippedAiLogo />
                 </Link>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
