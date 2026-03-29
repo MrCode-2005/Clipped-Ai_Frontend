@@ -97,14 +97,10 @@ export default function HeroCarousel() {
                 // Central card is 1000px wide, exactly mapping Opus.pro container
                 className="absolute w-full max-w-[1000px] h-full rounded-[24px] overflow-hidden bg-[#1D1D21] transition-shadow duration-500"
                 initial={{ 
-                  x: `calc(${offset * 85}% + ${offset * 10}px)`, 
-                  scale: offset === 0 ? 1 : 0.85,
-                  opacity: offset === 0 ? 1 : 0.6,
+                  x: `calc(${offset * 100}% + ${offset * 20}px)`, 
                 }}
                 animate={{
-                  x: `calc(${offset * 85}% + ${offset * 10}px)`,
-                  scale: offset === 0 ? 1 : 0.85,
-                  opacity: offset === 0 ? 1 : 0.6,
+                  x: `calc(${offset * 100}% + ${offset * 20}px)`,
                   zIndex: offset === 0 ? 20 : 10,
                 }}
                 transition={{
