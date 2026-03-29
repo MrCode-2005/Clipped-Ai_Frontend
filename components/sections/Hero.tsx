@@ -98,14 +98,15 @@ export default function Hero() {
             </button>
           </FadeIn>
 
-          {/* Hero Video/Image showcase */}
-          <FadeIn delay={0.4}>
-            <div className="relative max-w-[1400px] mx-auto mt-0">
-              <HeroCarousel />
-            </div>
-          </FadeIn>
         </div>
       </div>
+
+      {/* Hero Video/Image showcase - Extends past container */}
+      <FadeIn delay={0.4}>
+        <div className="relative w-full max-w-[1920px] mx-auto mt-0 pb-10">
+          <HeroCarousel />
+        </div>
+      </FadeIn>
     </section>
   );
 }
