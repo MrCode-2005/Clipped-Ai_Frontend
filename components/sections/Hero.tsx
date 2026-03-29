@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-radial from-accent-blue/5 via-transparent to-transparent pointer-events-none" />
 
       <div className="padding-global">
-        <div className="container-1200 pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12">
+        <div className="container-1200 pt-[40px] md:pt-[60px] lg:pt-[80px] pb-8 md:pb-12">
           {/* Badge */}
           <FadeIn className="text-center mb-6">
             <span className="text-[12px] md:text-[14px] font-bold uppercase tracking-[0.1em] text-white">
@@ -56,14 +56,14 @@ export default function Hero() {
           </FadeIn>
 
           {/* Subheading */}
-          <FadeIn delay={0.2} className="text-center mb-10 w-full max-w-[900px] mx-auto px-4">
+          <FadeIn delay={0.2} className="text-center mb-[48px] w-full max-w-[900px] mx-auto px-4">
             <p className="text-[16px] md:text-[20px] text-[#D1D1D1] leading-[1.6] font-normal">
               {HERO_CONTENT.subheading}
             </p>
           </FadeIn>
 
           {/* CTA Area */}
-          <FadeIn delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-2 px-4">
+          <FadeIn delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-[64px] px-4">
             {/* Video link input + Get free clips combined pill */}
             <form
               onSubmit={handleSubmit}
