@@ -1,6 +1,5 @@
 import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/sections/Hero';
-import TrustedBy from '@/components/sections/TrustedBy';
 import ClipAnything from '@/components/sections/ClipAnything';
 import Autopilot from '@/components/sections/Autopilot';
 import AIEditor from '@/components/sections/AIEditor';
@@ -19,7 +18,6 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <TrustedBy />
         <ClipAnything />
         <Autopilot />
         <AIEditor />
