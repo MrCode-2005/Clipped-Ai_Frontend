@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { HERO_CONTENT, CREATOR_LOGOS } from '@/lib/constants';
+import { HERO_CONTENT } from '@/lib/constants';
 import FadeIn from '@/components/animations/FadeIn';
 import HeroCarousel from '@/components/ui/HeroCarousel';
 

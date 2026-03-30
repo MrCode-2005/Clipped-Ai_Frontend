@@ -12,10 +12,6 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'public.cdn.opus.pro',
       },
-      {
-        protocol: 'https',
-        hostname: 'yt3.googleusercontent.com',
-      },
     ],
   },
 };

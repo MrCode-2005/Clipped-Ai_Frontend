@@ -58,7 +58,7 @@ export default function ScaleSection() {
                     />
                   </div>
                   <div className="px-4 flex-1 flex flex-col items-center">
-                    <h3 className="text-[20px] md:text-[24px] font-bold mb-3 tracking-tight group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-[20px] md:text-[24px] font-bold mb-3 tracking-tight">
                       {feature.title}
                     </h3>
                     <p className="text-[15px] md:text-[16px] leading-[1.6] text-[#A1A1AA] flex-1 max-w-[320px]">

@@ -101,43 +101,6 @@ export const SCALE_FEATURES = [
   },
 ];
 
-// ===== Testimonials =====
-export const TESTIMONIALS = [
-  {
-    name: 'Karen V. Kitt, M.Ed.',
-    image: '/images/testimonial-karen.avif',
-    quote: 'ClippedAI has transformed how I create content for my educational platform.',
-  },
-  {
-    name: 'JRAAH Podcast',
-    image: '/images/testimonial-jraahpodcast.avif',
-    quote: 'We went from posting 2 clips a week to 10+ with ClippedAI.',
-  },
-  {
-    name: 'Veterans Archives',
-    image: '/images/testimonial-veteransarchives.avif',
-    quote: 'The AI knows exactly which moments resonate with our audience.',
-  },
-  {
-    name: 'Wake Up Warrior',
-    image: '/images/testimonial-wakeupwarrior.avif',
-    quote: 'Our social media engagement increased 300% after using ClippedAI.',
-  },
-  {
-    name: 'Closeted Kicks Convos',
-    image: '/images/testimonial-closetedkicks.avif',
-    quote: 'The best content repurposing tool we have ever used.',
-  },
-];
-
-export const CREATOR_LOGOS = [
-  { name: 'Mark Rober', src: '/images/mark-rober.avif' },
-  { name: 'Lewis Howes', src: '/images/lewis-howes.avif' },
-  { name: 'Jason Lemkin', src: '/images/jason-lemkin.avif' },
-  { name: 'Jacksfilms', src: '/images/jacksfilms.avif' },
-  { name: 'Jubilee Media', src: '/images/jubilee-media.avif' },
-];
-
 // ===== FAQ =====
 export const FAQ_ITEMS = [
   {
@@ -220,10 +183,10 @@ export const FOOTER_LINKS = {
 };
 
 export const SOCIAL_LINKS = [
-  { name: 'YouTube', href: 'https://www.youtube.com/@opusclip' },
-  { name: 'TikTok', href: 'https://www.tiktok.com/@opusclip' },
-  { name: 'Twitter', href: 'https://twitter.com/opusclip' },
-  { name: 'Discord', href: 'https://discord.com/invite/wqbb7ZKhjg' },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/opusclip' },
-  { name: 'Instagram', href: 'https://www.instagram.com/opusclip/' },
+  { name: 'YouTube', href: '#' },
+  { name: 'TikTok', href: '#' },
+  { name: 'Twitter', href: '#' },
+  { name: 'Discord', href: '#' },
+  { name: 'LinkedIn', href: '#' },
+  { name: 'Instagram', href: '#' },
 ];

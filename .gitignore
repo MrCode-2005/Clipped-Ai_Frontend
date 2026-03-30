@@ -15,6 +15,7 @@ build
 
 # misc
 .DS_Store
+**/.DS_Store
 *.pem
 
 # debug
@@ -36,11 +37,6 @@ next-env.d.ts
 /tmp/
 .cache/
 
-# utility scripts (not needed for frontend deployment)
-copy.js
-creators.json
-get_svgs.js
-parse_creators.js
 
 # scraped html code
 public/*.html
