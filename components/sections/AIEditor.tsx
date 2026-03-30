@@ -27,7 +27,7 @@ export default function AIEditor() {
   }, []);
 
   return (
-    <section className="py-20 md:py-32 overflow-hidden bg-background">
+    <section id="ai-editor" className="py-20 md:py-32 overflow-hidden bg-background">
       <div className="padding-global">
         <div className="container-1200">
           

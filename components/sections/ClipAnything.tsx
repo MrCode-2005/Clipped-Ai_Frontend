@@ -31,7 +31,7 @@ export default function ClipAnything() {
             
             {/* ClipAnything */}
             <ScrollReveal delay={0.1} className="flex flex-col group cursor-pointer">
-              <div className="rounded-2xl lg:rounded-[32px] overflow-hidden mb-6 md:mb-8 bg-[#18181B]/50 border border-white/5 relative aspect-[1.47/1] sm:aspect-[4/3] w-full flex items-center justify-center p-0">
+              <div id="clip-anything" className="rounded-2xl lg:rounded-[32px] overflow-hidden mb-6 md:mb-8 bg-[#18181B]/50 border border-white/5 relative aspect-[1.47/1] sm:aspect-[4/3] w-full flex items-center justify-center p-0">
                 <img
                   src="https://cdn.prod.website-files.com/6388604483b03a9ecb34d695/684c2798958314e4a8958d21_ClipAnything.avif"
                   alt="ClipAnything"
@@ -40,7 +40,7 @@ export default function ClipAnything() {
                 />
               </div>
               <div className="px-2">
-                <h3 className="text-[24px] md:text-[28px] font-bold mb-3 md:mb-4 tracking-tight group-hover:text-blue-400 transition-colors">ClipAnything</h3>
+                <h3 className="text-[24px] md:text-[28px] font-bold mb-3 md:mb-4 tracking-tight">ClipAnything</h3>
                 <p className="text-[15px] md:text-[16px] leading-[1.6] text-[#A1A1AA]">
                   Every other AI clipping tool only works with video podcasts. ClipAnything is the only AI clipping model that turns any genre — vlogs, gaming, sports, interviews, explainer videos — into viral clips in 1 click.
                 </p>
@@ -49,7 +49,7 @@ export default function ClipAnything() {
 
             {/* ReframeAnything */}
             <ScrollReveal delay={0.2} className="flex flex-col group cursor-pointer">
-              <div className="rounded-2xl lg:rounded-[32px] overflow-hidden mb-6 md:mb-8 bg-[#18181B]/50 border border-white/5 relative aspect-[1.47/1] sm:aspect-[4/3] w-full flex items-center justify-center p-0">
+              <div id="ai-reframe" className="rounded-2xl lg:rounded-[32px] overflow-hidden mb-6 md:mb-8 bg-[#18181B]/50 border border-white/5 relative aspect-[1.47/1] sm:aspect-[4/3] w-full flex items-center justify-center p-0">
                 <video
                   poster="https://cdn.prod.website-files.com/6388604483b03a9ecb34d695/684c2bbbf8b365ec027deb37_ReframeAnything.avif"
                   src="https://cdn.prod.website-files.com/6388604483b03a9ecb34d695%2F684c290acf00706f1ffb2fe4_20250613-163457-transcode.mp4"
@@ -61,7 +61,7 @@ export default function ClipAnything() {
                 />
               </div>
               <div className="px-2">
-                <h3 className="text-[24px] md:text-[28px] font-bold mb-3 md:mb-4 tracking-tight group-hover:text-amber-500 transition-colors">ReframeAnything</h3>
+                <h3 className="text-[24px] md:text-[28px] font-bold mb-3 md:mb-4 tracking-tight">ReframeAnything</h3>
                 <p className="text-[15px] md:text-[16px] leading-[1.6] text-[#A1A1AA]">
                   The only AI reframe model that resizes any video for any platform and keeps moving subjects centered with AI object tracking. If you want more control, use manual tracking to instruct AI exactly what to follow.
                 </p>
