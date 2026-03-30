@@ -4,9 +4,9 @@ export const NAV_LINKS = {
     label: 'Features',
     items: [
       { label: 'ClipAnything', description: 'Clip any video type with AI', href: '#clip-anything' },
-      { label: 'AI B-Roll', description: 'Add AI-generated B-roll footage', href: '#ai-editor' },
-      { label: 'AI Captions', description: 'Auto-generate accurate captions', href: '#ai-editor' },
-      { label: 'AI Reframe', description: 'Reframe videos for any platform', href: '#ai-reframe' },
+      { label: 'AI B-Roll', description: 'Add AI-generated B-roll footage', href: '#slide-broll' },
+      { label: 'AI Captions', description: 'Auto-generate accurate captions', href: '#slide-captions' },
+      { label: 'AI Reframe', description: 'Reframe videos for any platform', href: '#slide-reframe' },
     ],
   },
   solutions: {

@@ -48,6 +48,29 @@ export default function HeroCarousel() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleNext, handlePrev]);
 
+  // Hash-based slide navigation: #slide-captions, #slide-broll, #slide-reframe
+  useEffect(() => {
+    const hashToIndex: Record<string, number> = {
+      '#slide-captions': 1,
+      '#slide-reframe': 2,
+      '#slide-broll': 3,
+    };
+    const goToSlideFromHash = (hash: string) => {
+      if (hash in hashToIndex) {
+        setCurrentIndex(hashToIndex[hash]);
+        // Scroll the carousel into view
+        const el = document.getElementById('hero-carousel');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    };
+    // On mount, check current hash
+    goToSlideFromHash(window.location.hash);
+    // On hash change (user clicks nav link)
+    const onHashChange = () => goToSlideFromHash(window.location.hash);
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
   const renderMedia = (item: typeof carouselItems[0]) => {
     if (item.type === 'video') {
       return (
@@ -74,7 +97,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden px-4 md:px-0 pt-0 pb-6 md:pb-10">
+    <div id="hero-carousel" className="relative w-full overflow-hidden px-4 md:px-0 pt-0 pb-6 md:pb-10">
       
       {/* Container holding the carousel tracks */}
       <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
