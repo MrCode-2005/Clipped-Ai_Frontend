@@ -147,7 +147,7 @@ export default function Footer() {
             {/* Bottom bar: copyright + social icons */}
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-[13px] text-[#555555]">
-                © {new Date().getFullYear()} ClippedAi by ClippedAi Inc. All rights reserved.
+                © {new Date().getFullYear()} ClippedAI by ClippedAI Inc. All rights reserved.
               </div>
 
               {/* Social icons */}

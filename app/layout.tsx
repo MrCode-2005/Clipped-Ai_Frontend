@@ -3,12 +3,12 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://clipped-ai-frontend.vercel.app'),
-  title: 'ClippedAi: #1 AI video clipping and editing tool',
-  description: 'ClippedAi turns long videos into shorts, and publishes them to all social platforms in one click. Trusted by 12 million video creators.',
-  keywords: ['AI video editor', 'video clipping', 'short form video', 'ClippedAi', 'video repurposing', 'AI shorts'],
+  title: 'ClippedAI: #1 AI video clipping and editing tool',
+  description: 'ClippedAI turns long videos into shorts, and publishes them to all social platforms in one click. Trusted by 12 million video creators.',
+  keywords: ['AI video editor', 'video clipping', 'short form video', 'ClippedAI', 'video repurposing', 'AI shorts'],
   openGraph: {
-    title: 'ClippedAi: #1 AI video clipping and editing tool',
-    description: 'ClippedAi turns long videos into shorts, and publishes them to all social platforms in one click.',
+    title: 'ClippedAI: #1 AI video clipping and editing tool',
+    description: 'ClippedAI turns long videos into shorts, and publishes them to all social platforms in one click.',
     type: 'website',
     url: 'https://clipped-ai-frontend.vercel.app',
     images: [
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
         url: '/images/og-thumbnail.jpg',
         width: 1200,
         height: 630,
-        alt: 'ClippedAi - AI Video Clipping Tool',
+        alt: 'ClippedAI - AI Video Clipping Tool',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ClippedAi: #1 AI video clipping and editing tool',
-    description: 'ClippedAi turns long videos into shorts, and publishes them to all social platforms in one click.',
+    title: 'ClippedAI: #1 AI video clipping and editing tool',
+    description: 'ClippedAI turns long videos into shorts, and publishes them to all social platforms in one click.',
     images: ['/images/og-thumbnail.jpg'],
   },
   robots: {
