@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { NAV_LINKS, DASHBOARD_URL } from '@/lib/constants';
+import AuthModal from '@/components/ui/AuthModal';
 
 function ChevronDown({ className = '' }: { className?: string }) {
   return (
@@ -97,6 +98,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -173,18 +175,18 @@ export default function Navbar() {
 
             {/* Desktop Actions — right */}
             <div className="hidden lg:flex items-center justify-end gap-5 z-10 shrink-0">
-              <Link
-                href="/signin"
+              <button
+                onClick={() => setIsAuthModalOpen(true)}
                 className="text-white hover:text-white/80 transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
               >
                 Sign in
-              </Link>
-              <Link
-                href="/signup"
+              </button>
+              <button
+                onClick={() => setIsAuthModalOpen(true)}
                 className="bg-white text-black hover:bg-white/90 transition-colors duration-200 text-[14px] font-semibold whitespace-nowrap px-4 py-[10px] rounded-[10px]"
               >
                 Sign up
-              </Link>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -261,20 +263,31 @@ export default function Navbar() {
                 <button
                   className="w-full py-3 text-center text-text-secondary hover:text-white
                              transition-colors font-medium rounded-xl border border-border hover:bg-white/5"
-                  onClick={() => {}}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsAuthModalOpen(true);
+                  }}
                 >
                   Sign in
                 </button>
-                <Link
-                  href={DASHBOARD_URL}
-                  className="btn-primary w-full text-center block"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                <button
+                  className="bg-white text-black w-full text-center block rounded-xl py-3 font-semibold hover:bg-white/90 transition-colors"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsAuthModalOpen(true);
+                  }}
                 >
                   Sign up
-                </Link>
+                </button>
               </div>
             </motion.nav>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isAuthModalOpen && (
+          <AuthModal onClose={() => setIsAuthModalOpen(false)} />
         )}
       </AnimatePresence>
 
