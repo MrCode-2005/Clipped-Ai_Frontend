@@ -139,7 +139,7 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="w-full max-w-[1328px] mx-auto px-6 md:px-8">
+        <div className="w-full px-6 md:px-8">
           <nav className="relative flex items-center justify-between h-[4.5rem]">
 
             <Link href="/" className="text-white shrink-0 z-10">
