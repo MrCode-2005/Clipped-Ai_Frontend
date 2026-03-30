@@ -5,7 +5,6 @@ export const NAV_LINKS = {
     items: [
       { label: 'ClipAnything', description: 'Clip any video type with AI', href: '#clip-anything' },
       { label: 'AI B-Roll', description: 'Add AI-generated B-roll footage', href: '#ai-broll' },
-      { label: 'AI Voice-over', description: 'Generate natural voice-overs', href: '#ai-voiceover' },
       { label: 'AI Captions', description: 'Auto-generate accurate captions', href: '#captions' },
       { label: 'AI Reframe', description: 'Reframe videos for any platform', href: '#reframe' },
     ],
