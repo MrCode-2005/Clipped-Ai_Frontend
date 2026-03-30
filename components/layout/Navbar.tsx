@@ -142,8 +142,7 @@ export default function Navbar() {
         <div className="w-full max-w-[1328px] mx-auto px-6 md:px-8">
           <nav className="relative flex items-center justify-between h-[4.5rem]">
 
-            {/* Logo — left */}
-            <Link href="/" className="text-white shrink-0 z-10 w-[200px]">
+            <Link href="/" className="text-white shrink-0 z-10">
                 <ClippedAiLogo />
             </Link>
 
@@ -173,7 +172,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Actions — right */}
-            <div className="hidden lg:flex items-center justify-end gap-5 z-10 min-w-[200px]">
+            <div className="hidden lg:flex items-center justify-end gap-5 z-10 shrink-0">
               <Link
                 href="/signin"
                 className="text-white hover:text-white/80 transition-colors duration-200 text-[15px] font-medium whitespace-nowrap"
