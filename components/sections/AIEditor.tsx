@@ -33,7 +33,7 @@ export default function AIEditor() {
           <ScrollReveal delay={0.1} className="w-full">
             <div className="w-full relative rounded-[20px] md:rounded-[32px] overflow-hidden border border-white/10 shadow-2xl bg-[#09090b]">
               <video 
-                src="https://assets.klap.app/web-assets/ai-reframe-compressed.mp4" 
+                src="/assets/animation/ai-reframe-compressed.mp4" 
                 autoPlay 
                 loop 
                 muted 
