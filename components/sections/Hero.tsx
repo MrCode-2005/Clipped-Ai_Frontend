@@ -46,12 +46,7 @@ export default function Hero() {
 
       <div className="padding-global">
         <div className="container-1200 pt-[40px] md:pt-[60px] lg:pt-[80px] pb-0">
-          {/* Badge */}
-          <FadeIn className="text-center mb-6">
-            <span className="text-[12px] md:text-[14px] font-bold uppercase tracking-[0.1em] text-white">
-              <span className="text-[#d4a853]">#1</span> AI VIDEO CLIPPING TOOL
-            </span>
-          </FadeIn>
+
 
           {/* Main Heading */}
           <FadeIn delay={0.1} className="text-center mb-6 w-full max-w-[1500px] mx-auto px-4">
