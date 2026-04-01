@@ -75,8 +75,8 @@ export default function Footer() {
             className="rounded-[24px] px-10 pt-10 pb-8"
             style={{ background: '#141414' }}
           >
-            {/* Links grid — 4 columns directly, NO logo row */}
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mb-10">
+            {/* Links grid — 3 columns directly, NO logo row */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-8 mb-10">
               {footerSections.map((section) => (
                 <div key={section.title}>
                   <h3 className="text-[13px] font-semibold text-white mb-4 tracking-normal">

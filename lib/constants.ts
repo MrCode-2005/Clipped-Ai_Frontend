@@ -131,14 +131,6 @@ export const FAQ_ITEMS = [
 
 // ===== Footer =====
 export const FOOTER_LINKS = {
-  company: {
-    title: 'Company',
-    links: [
-      { label: 'About us', href: '#' },
-      { label: 'Careers', href: '#', badge: "We're hiring!" },
-      { label: 'Contact Us', href: '#' },
-    ],
-  },
   product: {
     title: 'Product',
     links: [
