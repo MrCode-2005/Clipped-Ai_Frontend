@@ -160,15 +160,6 @@ export const FOOTER_LINKS = {
       { label: 'Learning center', href: '#' },
     ],
   },
-  bestPractices: {
-    title: 'Best Practices',
-    links: [
-      { label: 'Hidden strategy top creators use to turn clips into 4M+ long-form views', href: '#' },
-      { label: "MrBeast's Vyro: Everything You Need to Know", href: '#' },
-      { label: 'From zero to monetization for a new YouTube channel in 40 days', href: '#' },
-      { label: 'How to Turn Long Videos into Viral Shorts: The Ultimate Guide for 2026', href: '#' },
-    ],
-  },
   trustAndLegal: {
     title: 'Trust and Legal',
     links: [

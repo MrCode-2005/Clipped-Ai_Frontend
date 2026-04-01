@@ -27,26 +27,41 @@ const carouselItems = [
   },
 ];
 
+// ===========================================================================
+// OJT VIVA EXPLANATION: HeroCarousel Component
+// ---------------------------------------------------------------------------
+// 1. This is a complex, interactive client component handling an array of media.
+// 2. Uses Framer Motion's AnimatePresence for smooth entry/exit and layout animations.
+// 3. Implements React hooks: useState (for active slide), useCallback (for memos),
+//    and useEffect (for keyboard navigation and URL hash syncing).
+// ===========================================================================
 export default function HeroCarousel() {
+  // VIVA NOTE: Tracks the active index in the carouselItems array
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // VIVA NOTE: useCallback memoizes the functions to prevent unnecessary re-renders.
+  // Advances to the next slide safely without out-of-bounds error.
   const handleNext = useCallback(() => {
     setCurrentIndex((prev) => (prev < carouselItems.length - 1 ? prev + 1 : prev));
   }, []);
 
+  // VIVA NOTE: Goes back to the previous slide.
   const handlePrev = useCallback(() => {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : prev));
   }, []);
 
-  // Keyboard navigation
+  // VIVA NOTE: Keyboard navigation effect. 
+  // We attach a 'keydown' listener to the global window object.
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') handlePrev();
       if (e.key === 'ArrowRight') handleNext();
     };
     window.addEventListener('keydown', handleKeyDown);
+    
+    // IMPORTANT VIVA NOTE: Cleanup function prevents memory leaks when component unmounts
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleNext, handlePrev]);
+  }, [handleNext, handlePrev]); // Dependencies: recreate effect if handlers change
 
   // Hash-based slide navigation: #slide-captions, #slide-broll, #slide-reframe
   useEffect(() => {
@@ -101,27 +116,35 @@ export default function HeroCarousel() {
       
       {/* Container holding the carousel tracks */}
       <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
+        {/* VIVA NOTE: AnimatePresence allows components to animate out when they are removed from the React tree. */}
         <AnimatePresence initial={false}>
           {carouselItems.map((item, index) => {
-            // Determine relative position (-1, 0, 1)
-            // Since we removed infinite loop, strictly use bounded difference
+            // VIVA NOTE: Calculate how far the current item is from the active index (-1 is left, 0 is center, +1 is right)
             let offset = index - currentIndex;
 
-            // Only render -1, 0, 1 for performance
+            // Only render -1, 0, 1 for DOM performance (we don't render slides too far off-screen)
             if (Math.abs(offset) > 1) return null;
 
             return (
               <motion.div
                 key={item.id}
-                // Central card is 1000px wide, exactly mapping Opus.pro container
                 className="absolute w-full max-w-[1000px] h-full rounded-[24px] overflow-hidden bg-[#1D1D21] transition-shadow duration-500"
+                
+                // VIVA NOTE: Framer Motion animation definitions
+                // 'initial' specifies the starting CSS properties before the component visibly mounts
                 initial={{ 
                   x: `calc(${offset * 100}% + ${offset * 20}px)`, 
                 }}
+                
+                // 'animate' defines the states it should dynamically transition to. 
+                // Whenever 'offset' changes, Framer Motion automatically interpolates the pixels smoothly.
                 animate={{
                   x: `calc(${offset * 100}% + ${offset * 20}px)`,
                   zIndex: offset === 0 ? 20 : 10,
                 }}
+                
+                // 'transition' specifies the physics behind the movement.
+                // Spring physics gives a natural, bouncy, fluid feel compared to ease-in-out.
                 transition={{
                   type: "spring",
                   stiffness: 300,

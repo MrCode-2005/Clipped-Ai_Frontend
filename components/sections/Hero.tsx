@@ -15,14 +15,26 @@ function LinkIcon() {
   );
 }
 
+// ===========================================================================
+// OJT VIVA EXPLANATION: Hero Component
+// ---------------------------------------------------------------------------
+// 1. 'use client' is required here because we are using React hooks (useState)
+//    and handling DOM events (onSubmit).
+// 2. This component represents the top-most visible section of the landing page.
+// ===========================================================================
 export default function Hero() {
+  // VIVA NOTE: React state to store the value of the video link input field
   const [videoLink, setVideoLink] = useState('');
 
+  // VIVA NOTE: Form submission handler
   const handleSubmit = (e: React.FormEvent) => {
+    // Prevents the default browser behavior of navigating/reloading on form submit
     e.preventDefault();
     if (videoLink) {
+      // If a link exists, open a new tab with the link encoded in the URL hash
       window.open(`#?video_link=${encodeURIComponent(videoLink)}`, '_blank');
     } else {
+      // Fallback if empty
       window.open('#', '_blank');
     }
   };
@@ -64,6 +76,7 @@ export default function Hero() {
           {/* CTA Area */}
           <FadeIn delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-[32px] px-4">
             {/* Video link input + Get free clips combined pill */}
+            {/* VIVA NOTE: The form wrapper. Triggers 'handleSubmit' when the button is clicked or 'Enter' is pressed */}
             <form
               onSubmit={handleSubmit}
               className="flex items-center bg-[#1C1C1C] border border-white/10 rounded-full overflow-hidden w-full sm:w-auto flex-1 max-w-[480px] p-1.5 transition-all duration-300"
@@ -72,6 +85,7 @@ export default function Hero() {
                 <span className="text-white/60 shrink-0">
                   <LinkIcon />
                 </span>
+                {/* VIVA NOTE: Controlled input field. Its value is tied to 'videoLink' state. */}
                 <input
                   type="text"
                   value={videoLink}
@@ -100,6 +114,8 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* VIVA NOTE: This is the dynamic interactive carousel below the hero text.
+          It uses Framer Motion internally for its smooth visual transitions. */}
       {/* Hero Video/Image showcase - Extends past container */}
       <FadeIn delay={0.4}>
         <div className="relative w-full max-w-[1920px] mx-auto mt-0 pb-10">

@@ -75,8 +75,8 @@ export default function Footer() {
             className="rounded-[24px] px-10 pt-10 pb-8"
             style={{ background: '#141414' }}
           >
-            {/* Links grid — 5 columns directly, NO logo row */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-8 mb-10">
+            {/* Links grid — 4 columns directly, NO logo row */}
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mb-10">
               {footerSections.map((section) => (
                 <div key={section.title}>
                   <h3 className="text-[13px] font-semibold text-white mb-4 tracking-normal">
@@ -109,26 +109,8 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Badges row + Language selector */}
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/images/soc2-badge.webp"
-                  alt="SOC2 TYPE 2 Certified"
-                  width={44}
-                  height={44}
-                  className="opacity-90"
-                />
-                <Image
-                  src="/images/best-software-badge.png"
-                  alt="Top 50 AI Products"
-                  width={44}
-                  height={44}
-                  className="opacity-90"
-                />
-              </div>
-
-              {/* Language selector */}
+            {/* Language selector */}
+            <div className="flex items-center justify-end mb-6">
               <button className="flex items-center gap-[6px] text-[13px] text-[#888888] hover:text-white transition-colors duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 18 19">
                   <path fill="currentColor" fillRule="evenodd" d="M9 2.995a6.825 6.825 0 1 0 0 13.65 6.825 6.825 0 0 0 0-13.65M.825 9.82a8.175 8.175 0 1 1 16.35 0 8.175 8.175 0 0 1-16.35 0" clipRule="evenodd"/>
